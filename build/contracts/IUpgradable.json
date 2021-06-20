@@ -1,0 +1,1807 @@
+{
+  "contractName": "IUpgradable",
+  "abi": [
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": true,
+          "internalType": "address",
+          "name": "previousOwner",
+          "type": "address"
+        },
+        {
+          "indexed": true,
+          "internalType": "address",
+          "name": "newOwner",
+          "type": "address"
+        }
+      ],
+      "name": "OwnershipTransferred",
+      "type": "event"
+    },
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": false,
+          "internalType": "address",
+          "name": "account",
+          "type": "address"
+        }
+      ],
+      "name": "Paused",
+      "type": "event"
+    },
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": false,
+          "internalType": "address",
+          "name": "account",
+          "type": "address"
+        }
+      ],
+      "name": "Unpaused",
+      "type": "event"
+    },
+    {
+      "inputs": [],
+      "name": "admin",
+      "outputs": [
+        {
+          "internalType": "address",
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "initSponsor",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "addr",
+          "type": "address"
+        }
+      ],
+      "name": "isOwner",
+      "outputs": [
+        {
+          "internalType": "bool",
+          "name": "",
+          "type": "bool"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "owner",
+      "outputs": [
+        {
+          "internalType": "address",
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "pause",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "paused",
+      "outputs": [
+        {
+          "internalType": "bool",
+          "name": "",
+          "type": "bool"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "register",
+      "outputs": [
+        {
+          "internalType": "contract JoveRegister",
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "registerAddress",
+      "outputs": [
+        {
+          "internalType": "address",
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "renounceOwnership",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "newOwner",
+          "type": "address"
+        }
+      ],
+      "name": "transferOwnership",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "unpause",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "updateDependentContractAddress",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "registerAddr",
+          "type": "address"
+        }
+      ],
+      "name": "updateRegisterAddress",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    }
+  ],
+  "metadata": "{\"compiler\":{\"version\":\"0.6.12+commit.27d51765\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"anonymous\":false,\"inputs\":[{\"indexed\":true,\"internalType\":\"address\",\"name\":\"previousOwner\",\"type\":\"address\"},{\"indexed\":true,\"internalType\":\"address\",\"name\":\"newOwner\",\"type\":\"address\"}],\"name\":\"OwnershipTransferred\",\"type\":\"event\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":false,\"internalType\":\"address\",\"name\":\"account\",\"type\":\"address\"}],\"name\":\"Paused\",\"type\":\"event\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":false,\"internalType\":\"address\",\"name\":\"account\",\"type\":\"address\"}],\"name\":\"Unpaused\",\"type\":\"event\"},{\"inputs\":[],\"name\":\"admin\",\"outputs\":[{\"internalType\":\"address\",\"name\":\"\",\"type\":\"address\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"initSponsor\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"addr\",\"type\":\"address\"}],\"name\":\"isOwner\",\"outputs\":[{\"internalType\":\"bool\",\"name\":\"\",\"type\":\"bool\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"owner\",\"outputs\":[{\"internalType\":\"address\",\"name\":\"\",\"type\":\"address\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"pause\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"paused\",\"outputs\":[{\"internalType\":\"bool\",\"name\":\"\",\"type\":\"bool\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"register\",\"outputs\":[{\"internalType\":\"contract JoveRegister\",\"name\":\"\",\"type\":\"address\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"registerAddress\",\"outputs\":[{\"internalType\":\"address\",\"name\":\"\",\"type\":\"address\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"renounceOwnership\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"newOwner\",\"type\":\"address\"}],\"name\":\"transferOwnership\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"unpause\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"updateDependentContractAddress\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"registerAddr\",\"type\":\"address\"}],\"name\":\"updateRegisterAddress\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"}],\"devdoc\":{\"kind\":\"dev\",\"methods\":{\"owner()\":{\"details\":\"Returns the address of the current owner.\"},\"renounceOwnership()\":{\"details\":\"Leaves the contract without owner. It will not be possible to call `onlyOwner` functions anymore. Can only be called by the current owner. NOTE: Renouncing ownership will leave the contract without an owner, thereby removing any functionality that is only available to the owner.\"},\"transferOwnership(address)\":{\"details\":\"Transfers ownership of the contract to a new account (`newOwner`). Can only be called by the current owner.\"}},\"version\":1},\"userdoc\":{\"kind\":\"user\",\"methods\":{},\"version\":1}},\"settings\":{\"compilationTarget\":{\"/home/huanglinjia/MyDapp/test_truffle/JoveInsurance/contracts/IUpgradable.sol\":\"IUpgradable\"},\"evmVersion\":\"istanbul\",\"libraries\":{},\"metadata\":{\"bytecodeHash\":\"ipfs\"},\"optimizer\":{\"enabled\":true,\"runs\":200},\"remappings\":[]},\"sources\":{\"/home/huanglinjia/MyDapp/test_truffle/JoveInsurance/contracts/@openzeppelin/GSN/Context.sol\":{\"keccak256\":\"0xdb26cbf4d028490f49831a7865c2fe1b28db44b535ca8d343785a3b768aae183\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://840b14ce0315c47d49ba328f1f9fa7654ded1c9e1559e6c5e777a7b2dc28bf0a\",\"dweb:/ipfs/QmTLLabn4wcfGro9LEmUXUN2nwKqZSotXMvjDCLXEnLtZP\"]},\"/home/huanglinjia/MyDapp/test_truffle/JoveInsurance/contracts/@openzeppelin/access/Ownable.sol\":{\"keccak256\":\"0xd9e1ca9387496e834f91a15dee49a69d38142b6e15593d7d013857f37f671f86\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://86fb4aa1a27cdcfccc80d492bab46aa1dd0f339407bdc7d6a42d886b5bf4f064\",\"dweb:/ipfs/QmeFLTJScMiik5GFBfhxnhh3C1ikpTxtinMowtVkxdugpr\"]},\"/home/huanglinjia/MyDapp/test_truffle/JoveInsurance/contracts/@openzeppelin/utils/Address.sol\":{\"keccak256\":\"0xdfb4f812600ba4ce6738c35584ceb8c9433472583051b48ba5b1f66cb758a498\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://df02dffe1c1de089d9b4f6192f0dcf464526f2230f420b3deec4645e0cdd2bff\",\"dweb:/ipfs/QmcqXGAU3KJqwrgUVoGJ2W8osomhSJ4R5kdsRpbuW3fELS\"]},\"/home/huanglinjia/MyDapp/test_truffle/JoveInsurance/contracts/ISponsorWhiteListControl.sol\":{\"keccak256\":\"0xaac604310411fcb754c7e763468f050930be6d4e8ea78f423830e8919f2f2856\",\"license\":\"SimPL-2.0\",\"urls\":[\"bzz-raw://3d8bc1507d0bbdb10ac2bc55ede50e8b022c8c5367ccbbf167796a4929211812\",\"dweb:/ipfs/Qmd2dhxmBS3eoVAtFXR5FxYwAWhufpJQi2W3buCNQz73P5\"]},\"/home/huanglinjia/MyDapp/test_truffle/JoveInsurance/contracts/IUpgradable.sol\":{\"keccak256\":\"0x4a9511562f7ea11e2caa44d7ad5ddc6143f70e2b7846c45130c2442d6b064210\",\"license\":\"SimPL-2.0\",\"urls\":[\"bzz-raw://c7f04b05a224c858ec6db2c065a1decee160f77498737ccd85d1692b611b76fa\",\"dweb:/ipfs/QmZL8qCo39DF7Ebwh1xjdKmfDhPA8QW85nG7gYCKe3HhUN\"]},\"/home/huanglinjia/MyDapp/test_truffle/JoveInsurance/contracts/ProxyOwnable1.sol\":{\"keccak256\":\"0xba36008838a9eea0309af8946493e109403033a0b57c8c9c0d42b26fa4f81d83\",\"license\":\"SimPL-2.0\",\"urls\":[\"bzz-raw://758fe2de15c5d873f499fdae43c7ee03877905da82c855e433f7071d035a1956\",\"dweb:/ipfs/QmZFnDhyJgoLgzi7q9ieEgqZe2GTaDTDVDdWjjtragWXsz\"]},\"/home/huanglinjia/MyDapp/test_truffle/JoveInsurance/contracts/jovePausable.sol\":{\"keccak256\":\"0x170929ddc8f20360fc01591ee965f2b7a93611182526769b5acef973127067e5\",\"license\":\"SimPL-2.0\",\"urls\":[\"bzz-raw://97aa47e79ee5533b195f3e1d357d50385f47cf1636fe8c6c75b13bab7b100c8e\",\"dweb:/ipfs/QmS6ErF7fDHycsor4F9kkGQWZNW4nZM5f4as9nFPkZVHEu\"]},\"/home/huanglinjia/MyDapp/test_truffle/JoveInsurance/contracts/joveRegister.sol\":{\"keccak256\":\"0xf72b366d22a97dd04e6954cc7922dbd95b308df5f58e80d44b822e718bee416c\",\"license\":\"SimPL-2.0\",\"urls\":[\"bzz-raw://df5ae94e7912ba5c6222f05b2677f0fe3f5ff55ef7e8a1e02142f6230d2ef2f0\",\"dweb:/ipfs/QmSfS7QcUZkRos4QbFnu7vTVKT9zSRLn5MQLaD6XkXiQrf\"]}},\"version\":1}",
+  "bytecode": "0x",
+  "deployedBytecode": "0x",
+  "immutableReferences": {},
+  "sourceMap": "",
+  "deployedSourceMap": "",
+  "source": "\n//           DO WHAT THE FUCK YOU WANT TO PUBLIC LICENSE\n//                   Version 2, December 2004\n// \n//Copyright (C) 2021 Joveproject <Joveproject@yahoo.com>\n//\n//Everyone is permitted to copy and distribute verbatim or modified\n//copies of this license document, and changing it is allowed as long\n//as the name is changed.\n// \n//           DO WHAT THE FUCK YOU WANT TO PUBLIC LICENSE\n//  TERMS AND CONDITIONS FOR COPYING, DISTRIBUTION AND MODIFICATION\n//\n// You just DO WHAT THE FUCK YOU WANT TO.\n//SPDX-License-Identifier: SimPL-2.0\npragma solidity >=0.6.0 <0.7.0;\n\nimport \"./joveRegister.sol\";\nimport \"./jovePausable.sol\";\n\nabstract contract IUpgradable is JovePausable{\n\n    JoveRegister public register;\n    address public registerAddress;\n\n\n    function  updateDependentContractAddress() public virtual;  \n\n    function updateRegisterAddress(address registerAddr) external {\n        if (address(register) != address(0)) {\n            require(register.isOwner(_msgSender()), \"Just the register's owner can call the updateRegisterAddress()\"); \n        }\n        register = JoveRegister(registerAddr);\n        setOwnable(registerAddr);\n        registerAddress=registerAddr;\n        //updateDependentContractAddress();\n    }\n\n}\n",
+  "sourcePath": "/home/huanglinjia/MyDapp/test_truffle/JoveInsurance/contracts/IUpgradable.sol",
+  "ast": {
+    "absolutePath": "/home/huanglinjia/MyDapp/test_truffle/JoveInsurance/contracts/IUpgradable.sol",
+    "exportedSymbols": {
+      "IUpgradable": [
+        13422
+      ]
+    },
+    "id": 13423,
+    "license": "SimPL-2.0",
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 13370,
+        "literals": [
+          "solidity",
+          ">=",
+          "0.6",
+          ".0",
+          "<",
+          "0.7",
+          ".0"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "543:31:73"
+      },
+      {
+        "absolutePath": "/home/huanglinjia/MyDapp/test_truffle/JoveInsurance/contracts/joveRegister.sol",
+        "file": "./joveRegister.sol",
+        "id": 13371,
+        "nodeType": "ImportDirective",
+        "scope": 13423,
+        "sourceUnit": 18495,
+        "src": "576:28:73",
+        "symbolAliases": [],
+        "unitAlias": ""
+      },
+      {
+        "absolutePath": "/home/huanglinjia/MyDapp/test_truffle/JoveInsurance/contracts/jovePausable.sol",
+        "file": "./jovePausable.sol",
+        "id": 13372,
+        "nodeType": "ImportDirective",
+        "scope": 13423,
+        "sourceUnit": 17336,
+        "src": "605:28:73",
+        "symbolAliases": [],
+        "unitAlias": ""
+      },
+      {
+        "abstract": true,
+        "baseContracts": [
+          {
+            "arguments": null,
+            "baseName": {
+              "contractScope": null,
+              "id": 13373,
+              "name": "JovePausable",
+              "nodeType": "UserDefinedTypeName",
+              "referencedDeclaration": 17335,
+              "src": "668:12:73",
+              "typeDescriptions": {
+                "typeIdentifier": "t_contract$_JovePausable_$17335",
+                "typeString": "contract JovePausable"
+              }
+            },
+            "id": 13374,
+            "nodeType": "InheritanceSpecifier",
+            "src": "668:12:73"
+          }
+        ],
+        "contractDependencies": [
+          22,
+          1588,
+          14238,
+          17335
+        ],
+        "contractKind": "contract",
+        "documentation": null,
+        "fullyImplemented": false,
+        "id": 13422,
+        "linearizedBaseContracts": [
+          13422,
+          17335,
+          14238,
+          1588,
+          22
+        ],
+        "name": "IUpgradable",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "constant": false,
+            "functionSelector": "1aa3a008",
+            "id": 13376,
+            "mutability": "mutable",
+            "name": "register",
+            "nodeType": "VariableDeclaration",
+            "overrides": null,
+            "scope": 13422,
+            "src": "687:28:73",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_contract$_JoveRegister_$18494",
+              "typeString": "contract JoveRegister"
+            },
+            "typeName": {
+              "contractScope": null,
+              "id": 13375,
+              "name": "JoveRegister",
+              "nodeType": "UserDefinedTypeName",
+              "referencedDeclaration": 18494,
+              "src": "687:12:73",
+              "typeDescriptions": {
+                "typeIdentifier": "t_contract$_JoveRegister_$18494",
+                "typeString": "contract JoveRegister"
+              }
+            },
+            "value": null,
+            "visibility": "public"
+          },
+          {
+            "constant": false,
+            "functionSelector": "1832425f",
+            "id": 13378,
+            "mutability": "mutable",
+            "name": "registerAddress",
+            "nodeType": "VariableDeclaration",
+            "overrides": null,
+            "scope": 13422,
+            "src": "721:30:73",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_address",
+              "typeString": "address"
+            },
+            "typeName": {
+              "id": 13377,
+              "name": "address",
+              "nodeType": "ElementaryTypeName",
+              "src": "721:7:73",
+              "stateMutability": "nonpayable",
+              "typeDescriptions": {
+                "typeIdentifier": "t_address",
+                "typeString": "address"
+              }
+            },
+            "value": null,
+            "visibility": "public"
+          },
+          {
+            "body": null,
+            "documentation": null,
+            "functionSelector": "35d3a9bc",
+            "id": 13381,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "updateDependentContractAddress",
+            "nodeType": "FunctionDefinition",
+            "overrides": null,
+            "parameters": {
+              "id": 13379,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "799:2:73"
+            },
+            "returnParameters": {
+              "id": 13380,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "816:0:73"
+            },
+            "scope": 13422,
+            "src": "759:58:73",
+            "stateMutability": "nonpayable",
+            "virtual": true,
+            "visibility": "public"
+          },
+          {
+            "body": {
+              "id": 13420,
+              "nodeType": "Block",
+              "src": "887:347:73",
+              "statements": [
+                {
+                  "condition": {
+                    "argumentTypes": null,
+                    "commonType": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    },
+                    "id": 13394,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftExpression": {
+                      "argumentTypes": null,
+                      "arguments": [
+                        {
+                          "argumentTypes": null,
+                          "id": 13388,
+                          "name": "register",
+                          "nodeType": "Identifier",
+                          "overloadedDeclarations": [],
+                          "referencedDeclaration": 13376,
+                          "src": "909:8:73",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_contract$_JoveRegister_$18494",
+                            "typeString": "contract JoveRegister"
+                          }
+                        }
+                      ],
+                      "expression": {
+                        "argumentTypes": [
+                          {
+                            "typeIdentifier": "t_contract$_JoveRegister_$18494",
+                            "typeString": "contract JoveRegister"
+                          }
+                        ],
+                        "id": 13387,
+                        "isConstant": false,
+                        "isLValue": false,
+                        "isPure": true,
+                        "lValueRequested": false,
+                        "nodeType": "ElementaryTypeNameExpression",
+                        "src": "901:7:73",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_type$_t_address_$",
+                          "typeString": "type(address)"
+                        },
+                        "typeName": {
+                          "id": 13386,
+                          "name": "address",
+                          "nodeType": "ElementaryTypeName",
+                          "src": "901:7:73",
+                          "typeDescriptions": {
+                            "typeIdentifier": null,
+                            "typeString": null
+                          }
+                        }
+                      },
+                      "id": 13389,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": false,
+                      "kind": "typeConversion",
+                      "lValueRequested": false,
+                      "names": [],
+                      "nodeType": "FunctionCall",
+                      "src": "901:17:73",
+                      "tryCall": false,
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_address",
+                        "typeString": "address"
+                      }
+                    },
+                    "nodeType": "BinaryOperation",
+                    "operator": "!=",
+                    "rightExpression": {
+                      "argumentTypes": null,
+                      "arguments": [
+                        {
+                          "argumentTypes": null,
+                          "hexValue": "30",
+                          "id": 13392,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": true,
+                          "kind": "number",
+                          "lValueRequested": false,
+                          "nodeType": "Literal",
+                          "src": "930:1:73",
+                          "subdenomination": null,
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_rational_0_by_1",
+                            "typeString": "int_const 0"
+                          },
+                          "value": "0"
+                        }
+                      ],
+                      "expression": {
+                        "argumentTypes": [
+                          {
+                            "typeIdentifier": "t_rational_0_by_1",
+                            "typeString": "int_const 0"
+                          }
+                        ],
+                        "id": 13391,
+                        "isConstant": false,
+                        "isLValue": false,
+                        "isPure": true,
+                        "lValueRequested": false,
+                        "nodeType": "ElementaryTypeNameExpression",
+                        "src": "922:7:73",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_type$_t_address_$",
+                          "typeString": "type(address)"
+                        },
+                        "typeName": {
+                          "id": 13390,
+                          "name": "address",
+                          "nodeType": "ElementaryTypeName",
+                          "src": "922:7:73",
+                          "typeDescriptions": {
+                            "typeIdentifier": null,
+                            "typeString": null
+                          }
+                        }
+                      },
+                      "id": 13393,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": true,
+                      "kind": "typeConversion",
+                      "lValueRequested": false,
+                      "names": [],
+                      "nodeType": "FunctionCall",
+                      "src": "922:10:73",
+                      "tryCall": false,
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_address_payable",
+                        "typeString": "address payable"
+                      }
+                    },
+                    "src": "901:31:73",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bool",
+                      "typeString": "bool"
+                    }
+                  },
+                  "falseBody": null,
+                  "id": 13405,
+                  "nodeType": "IfStatement",
+                  "src": "897:168:73",
+                  "trueBody": {
+                    "id": 13404,
+                    "nodeType": "Block",
+                    "src": "934:131:73",
+                    "statements": [
+                      {
+                        "expression": {
+                          "argumentTypes": null,
+                          "arguments": [
+                            {
+                              "argumentTypes": null,
+                              "arguments": [
+                                {
+                                  "argumentTypes": null,
+                                  "arguments": [],
+                                  "expression": {
+                                    "argumentTypes": [],
+                                    "id": 13398,
+                                    "name": "_msgSender",
+                                    "nodeType": "Identifier",
+                                    "overloadedDeclarations": [],
+                                    "referencedDeclaration": 10,
+                                    "src": "973:10:73",
+                                    "typeDescriptions": {
+                                      "typeIdentifier": "t_function_internal_view$__$returns$_t_address_payable_$",
+                                      "typeString": "function () view returns (address payable)"
+                                    }
+                                  },
+                                  "id": 13399,
+                                  "isConstant": false,
+                                  "isLValue": false,
+                                  "isPure": false,
+                                  "kind": "functionCall",
+                                  "lValueRequested": false,
+                                  "names": [],
+                                  "nodeType": "FunctionCall",
+                                  "src": "973:12:73",
+                                  "tryCall": false,
+                                  "typeDescriptions": {
+                                    "typeIdentifier": "t_address_payable",
+                                    "typeString": "address payable"
+                                  }
+                                }
+                              ],
+                              "expression": {
+                                "argumentTypes": [
+                                  {
+                                    "typeIdentifier": "t_address_payable",
+                                    "typeString": "address payable"
+                                  }
+                                ],
+                                "expression": {
+                                  "argumentTypes": null,
+                                  "id": 13396,
+                                  "name": "register",
+                                  "nodeType": "Identifier",
+                                  "overloadedDeclarations": [],
+                                  "referencedDeclaration": 13376,
+                                  "src": "956:8:73",
+                                  "typeDescriptions": {
+                                    "typeIdentifier": "t_contract$_JoveRegister_$18494",
+                                    "typeString": "contract JoveRegister"
+                                  }
+                                },
+                                "id": 13397,
+                                "isConstant": false,
+                                "isLValue": false,
+                                "isPure": false,
+                                "lValueRequested": false,
+                                "memberName": "isOwner",
+                                "nodeType": "MemberAccess",
+                                "referencedDeclaration": 1524,
+                                "src": "956:16:73",
+                                "typeDescriptions": {
+                                  "typeIdentifier": "t_function_external_view$_t_address_$returns$_t_bool_$",
+                                  "typeString": "function (address) view external returns (bool)"
+                                }
+                              },
+                              "id": 13400,
+                              "isConstant": false,
+                              "isLValue": false,
+                              "isPure": false,
+                              "kind": "functionCall",
+                              "lValueRequested": false,
+                              "names": [],
+                              "nodeType": "FunctionCall",
+                              "src": "956:30:73",
+                              "tryCall": false,
+                              "typeDescriptions": {
+                                "typeIdentifier": "t_bool",
+                                "typeString": "bool"
+                              }
+                            },
+                            {
+                              "argumentTypes": null,
+                              "hexValue": "4a757374207468652072656769737465722773206f776e65722063616e2063616c6c20746865207570646174655265676973746572416464726573732829",
+                              "id": 13401,
+                              "isConstant": false,
+                              "isLValue": false,
+                              "isPure": true,
+                              "kind": "string",
+                              "lValueRequested": false,
+                              "nodeType": "Literal",
+                              "src": "988:64:73",
+                              "subdenomination": null,
+                              "typeDescriptions": {
+                                "typeIdentifier": "t_stringliteral_1c20a4a5ade867a62d008df9d169dd3cc432ca281308ddda9d048c29457f08bf",
+                                "typeString": "literal_string \"Just the register's owner can call the updateRegisterAddress()\""
+                              },
+                              "value": "Just the register's owner can call the updateRegisterAddress()"
+                            }
+                          ],
+                          "expression": {
+                            "argumentTypes": [
+                              {
+                                "typeIdentifier": "t_bool",
+                                "typeString": "bool"
+                              },
+                              {
+                                "typeIdentifier": "t_stringliteral_1c20a4a5ade867a62d008df9d169dd3cc432ca281308ddda9d048c29457f08bf",
+                                "typeString": "literal_string \"Just the register's owner can call the updateRegisterAddress()\""
+                              }
+                            ],
+                            "id": 13395,
+                            "name": "require",
+                            "nodeType": "Identifier",
+                            "overloadedDeclarations": [
+                              -18,
+                              -18
+                            ],
+                            "referencedDeclaration": -18,
+                            "src": "948:7:73",
+                            "typeDescriptions": {
+                              "typeIdentifier": "t_function_require_pure$_t_bool_$_t_string_memory_ptr_$returns$__$",
+                              "typeString": "function (bool,string memory) pure"
+                            }
+                          },
+                          "id": 13402,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": false,
+                          "kind": "functionCall",
+                          "lValueRequested": false,
+                          "names": [],
+                          "nodeType": "FunctionCall",
+                          "src": "948:105:73",
+                          "tryCall": false,
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_tuple$__$",
+                            "typeString": "tuple()"
+                          }
+                        },
+                        "id": 13403,
+                        "nodeType": "ExpressionStatement",
+                        "src": "948:105:73"
+                      }
+                    ]
+                  }
+                },
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "id": 13410,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftHandSide": {
+                      "argumentTypes": null,
+                      "id": 13406,
+                      "name": "register",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 13376,
+                      "src": "1074:8:73",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_contract$_JoveRegister_$18494",
+                        "typeString": "contract JoveRegister"
+                      }
+                    },
+                    "nodeType": "Assignment",
+                    "operator": "=",
+                    "rightHandSide": {
+                      "argumentTypes": null,
+                      "arguments": [
+                        {
+                          "argumentTypes": null,
+                          "id": 13408,
+                          "name": "registerAddr",
+                          "nodeType": "Identifier",
+                          "overloadedDeclarations": [],
+                          "referencedDeclaration": 13383,
+                          "src": "1098:12:73",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_address",
+                            "typeString": "address"
+                          }
+                        }
+                      ],
+                      "expression": {
+                        "argumentTypes": [
+                          {
+                            "typeIdentifier": "t_address",
+                            "typeString": "address"
+                          }
+                        ],
+                        "id": 13407,
+                        "name": "JoveRegister",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 18494,
+                        "src": "1085:12:73",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_type$_t_contract$_JoveRegister_$18494_$",
+                          "typeString": "type(contract JoveRegister)"
+                        }
+                      },
+                      "id": 13409,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": false,
+                      "kind": "typeConversion",
+                      "lValueRequested": false,
+                      "names": [],
+                      "nodeType": "FunctionCall",
+                      "src": "1085:26:73",
+                      "tryCall": false,
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_contract$_JoveRegister_$18494",
+                        "typeString": "contract JoveRegister"
+                      }
+                    },
+                    "src": "1074:37:73",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_contract$_JoveRegister_$18494",
+                      "typeString": "contract JoveRegister"
+                    }
+                  },
+                  "id": 13411,
+                  "nodeType": "ExpressionStatement",
+                  "src": "1074:37:73"
+                },
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "arguments": [
+                      {
+                        "argumentTypes": null,
+                        "id": 13413,
+                        "name": "registerAddr",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 13383,
+                        "src": "1132:12:73",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_address",
+                          "typeString": "address"
+                        }
+                      }
+                    ],
+                    "expression": {
+                      "argumentTypes": [
+                        {
+                          "typeIdentifier": "t_address",
+                          "typeString": "address"
+                        }
+                      ],
+                      "id": 13412,
+                      "name": "setOwnable",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 14187,
+                      "src": "1121:10:73",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_internal_nonpayable$_t_address_$returns$__$",
+                        "typeString": "function (address)"
+                      }
+                    },
+                    "id": 13414,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "1121:24:73",
+                    "tryCall": false,
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_tuple$__$",
+                      "typeString": "tuple()"
+                    }
+                  },
+                  "id": 13415,
+                  "nodeType": "ExpressionStatement",
+                  "src": "1121:24:73"
+                },
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "id": 13418,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftHandSide": {
+                      "argumentTypes": null,
+                      "id": 13416,
+                      "name": "registerAddress",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 13378,
+                      "src": "1155:15:73",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_address",
+                        "typeString": "address"
+                      }
+                    },
+                    "nodeType": "Assignment",
+                    "operator": "=",
+                    "rightHandSide": {
+                      "argumentTypes": null,
+                      "id": 13417,
+                      "name": "registerAddr",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 13383,
+                      "src": "1171:12:73",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_address",
+                        "typeString": "address"
+                      }
+                    },
+                    "src": "1155:28:73",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "id": 13419,
+                  "nodeType": "ExpressionStatement",
+                  "src": "1155:28:73"
+                }
+              ]
+            },
+            "documentation": null,
+            "functionSelector": "360e3e92",
+            "id": 13421,
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "updateRegisterAddress",
+            "nodeType": "FunctionDefinition",
+            "overrides": null,
+            "parameters": {
+              "id": 13384,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 13383,
+                  "mutability": "mutable",
+                  "name": "registerAddr",
+                  "nodeType": "VariableDeclaration",
+                  "overrides": null,
+                  "scope": 13421,
+                  "src": "856:20:73",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 13382,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "856:7:73",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "855:22:73"
+            },
+            "returnParameters": {
+              "id": 13385,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "887:0:73"
+            },
+            "scope": 13422,
+            "src": "825:409:73",
+            "stateMutability": "nonpayable",
+            "virtual": false,
+            "visibility": "external"
+          }
+        ],
+        "scope": 13423,
+        "src": "635:602:73"
+      }
+    ],
+    "src": "543:695:73"
+  },
+  "legacyAST": {
+    "attributes": {
+      "absolutePath": "/home/huanglinjia/MyDapp/test_truffle/JoveInsurance/contracts/IUpgradable.sol",
+      "exportedSymbols": {
+        "IUpgradable": [
+          13422
+        ]
+      },
+      "license": "SimPL-2.0"
+    },
+    "children": [
+      {
+        "attributes": {
+          "literals": [
+            "solidity",
+            ">=",
+            "0.6",
+            ".0",
+            "<",
+            "0.7",
+            ".0"
+          ]
+        },
+        "id": 13370,
+        "name": "PragmaDirective",
+        "src": "543:31:73"
+      },
+      {
+        "attributes": {
+          "SourceUnit": 18495,
+          "absolutePath": "/home/huanglinjia/MyDapp/test_truffle/JoveInsurance/contracts/joveRegister.sol",
+          "file": "./joveRegister.sol",
+          "scope": 13423,
+          "symbolAliases": [
+            null
+          ],
+          "unitAlias": ""
+        },
+        "id": 13371,
+        "name": "ImportDirective",
+        "src": "576:28:73"
+      },
+      {
+        "attributes": {
+          "SourceUnit": 17336,
+          "absolutePath": "/home/huanglinjia/MyDapp/test_truffle/JoveInsurance/contracts/jovePausable.sol",
+          "file": "./jovePausable.sol",
+          "scope": 13423,
+          "symbolAliases": [
+            null
+          ],
+          "unitAlias": ""
+        },
+        "id": 13372,
+        "name": "ImportDirective",
+        "src": "605:28:73"
+      },
+      {
+        "attributes": {
+          "abstract": true,
+          "contractDependencies": [
+            22,
+            1588,
+            14238,
+            17335
+          ],
+          "contractKind": "contract",
+          "documentation": null,
+          "fullyImplemented": false,
+          "linearizedBaseContracts": [
+            13422,
+            17335,
+            14238,
+            1588,
+            22
+          ],
+          "name": "IUpgradable",
+          "scope": 13423
+        },
+        "children": [
+          {
+            "attributes": {
+              "arguments": null
+            },
+            "children": [
+              {
+                "attributes": {
+                  "contractScope": null,
+                  "name": "JovePausable",
+                  "referencedDeclaration": 17335,
+                  "type": "contract JovePausable"
+                },
+                "id": 13373,
+                "name": "UserDefinedTypeName",
+                "src": "668:12:73"
+              }
+            ],
+            "id": 13374,
+            "name": "InheritanceSpecifier",
+            "src": "668:12:73"
+          },
+          {
+            "attributes": {
+              "constant": false,
+              "functionSelector": "1aa3a008",
+              "mutability": "mutable",
+              "name": "register",
+              "overrides": null,
+              "scope": 13422,
+              "stateVariable": true,
+              "storageLocation": "default",
+              "type": "contract JoveRegister",
+              "value": null,
+              "visibility": "public"
+            },
+            "children": [
+              {
+                "attributes": {
+                  "contractScope": null,
+                  "name": "JoveRegister",
+                  "referencedDeclaration": 18494,
+                  "type": "contract JoveRegister"
+                },
+                "id": 13375,
+                "name": "UserDefinedTypeName",
+                "src": "687:12:73"
+              }
+            ],
+            "id": 13376,
+            "name": "VariableDeclaration",
+            "src": "687:28:73"
+          },
+          {
+            "attributes": {
+              "constant": false,
+              "functionSelector": "1832425f",
+              "mutability": "mutable",
+              "name": "registerAddress",
+              "overrides": null,
+              "scope": 13422,
+              "stateVariable": true,
+              "storageLocation": "default",
+              "type": "address",
+              "value": null,
+              "visibility": "public"
+            },
+            "children": [
+              {
+                "attributes": {
+                  "name": "address",
+                  "stateMutability": "nonpayable",
+                  "type": "address"
+                },
+                "id": 13377,
+                "name": "ElementaryTypeName",
+                "src": "721:7:73"
+              }
+            ],
+            "id": 13378,
+            "name": "VariableDeclaration",
+            "src": "721:30:73"
+          },
+          {
+            "attributes": {
+              "body": null,
+              "documentation": null,
+              "functionSelector": "35d3a9bc",
+              "implemented": false,
+              "isConstructor": false,
+              "kind": "function",
+              "modifiers": [
+                null
+              ],
+              "name": "updateDependentContractAddress",
+              "overrides": null,
+              "scope": 13422,
+              "stateMutability": "nonpayable",
+              "virtual": true,
+              "visibility": "public"
+            },
+            "children": [
+              {
+                "attributes": {
+                  "parameters": [
+                    null
+                  ]
+                },
+                "children": [],
+                "id": 13379,
+                "name": "ParameterList",
+                "src": "799:2:73"
+              },
+              {
+                "attributes": {
+                  "parameters": [
+                    null
+                  ]
+                },
+                "children": [],
+                "id": 13380,
+                "name": "ParameterList",
+                "src": "816:0:73"
+              }
+            ],
+            "id": 13381,
+            "name": "FunctionDefinition",
+            "src": "759:58:73"
+          },
+          {
+            "attributes": {
+              "documentation": null,
+              "functionSelector": "360e3e92",
+              "implemented": true,
+              "isConstructor": false,
+              "kind": "function",
+              "modifiers": [
+                null
+              ],
+              "name": "updateRegisterAddress",
+              "overrides": null,
+              "scope": 13422,
+              "stateMutability": "nonpayable",
+              "virtual": false,
+              "visibility": "external"
+            },
+            "children": [
+              {
+                "children": [
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "mutability": "mutable",
+                      "name": "registerAddr",
+                      "overrides": null,
+                      "scope": 13421,
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "type": "address",
+                      "value": null,
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "name": "address",
+                          "stateMutability": "nonpayable",
+                          "type": "address"
+                        },
+                        "id": 13382,
+                        "name": "ElementaryTypeName",
+                        "src": "856:7:73"
+                      }
+                    ],
+                    "id": 13383,
+                    "name": "VariableDeclaration",
+                    "src": "856:20:73"
+                  }
+                ],
+                "id": 13384,
+                "name": "ParameterList",
+                "src": "855:22:73"
+              },
+              {
+                "attributes": {
+                  "parameters": [
+                    null
+                  ]
+                },
+                "children": [],
+                "id": 13385,
+                "name": "ParameterList",
+                "src": "887:0:73"
+              },
+              {
+                "children": [
+                  {
+                    "attributes": {
+                      "falseBody": null
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "argumentTypes": null,
+                          "commonType": {
+                            "typeIdentifier": "t_address",
+                            "typeString": "address"
+                          },
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": false,
+                          "lValueRequested": false,
+                          "operator": "!=",
+                          "type": "bool"
+                        },
+                        "children": [
+                          {
+                            "attributes": {
+                              "argumentTypes": null,
+                              "isConstant": false,
+                              "isLValue": false,
+                              "isPure": false,
+                              "isStructConstructorCall": false,
+                              "lValueRequested": false,
+                              "names": [
+                                null
+                              ],
+                              "tryCall": false,
+                              "type": "address",
+                              "type_conversion": true
+                            },
+                            "children": [
+                              {
+                                "attributes": {
+                                  "argumentTypes": [
+                                    {
+                                      "typeIdentifier": "t_contract$_JoveRegister_$18494",
+                                      "typeString": "contract JoveRegister"
+                                    }
+                                  ],
+                                  "isConstant": false,
+                                  "isLValue": false,
+                                  "isPure": true,
+                                  "lValueRequested": false,
+                                  "type": "type(address)"
+                                },
+                                "children": [
+                                  {
+                                    "attributes": {
+                                      "name": "address",
+                                      "type": null
+                                    },
+                                    "id": 13386,
+                                    "name": "ElementaryTypeName",
+                                    "src": "901:7:73"
+                                  }
+                                ],
+                                "id": 13387,
+                                "name": "ElementaryTypeNameExpression",
+                                "src": "901:7:73"
+                              },
+                              {
+                                "attributes": {
+                                  "argumentTypes": null,
+                                  "overloadedDeclarations": [
+                                    null
+                                  ],
+                                  "referencedDeclaration": 13376,
+                                  "type": "contract JoveRegister",
+                                  "value": "register"
+                                },
+                                "id": 13388,
+                                "name": "Identifier",
+                                "src": "909:8:73"
+                              }
+                            ],
+                            "id": 13389,
+                            "name": "FunctionCall",
+                            "src": "901:17:73"
+                          },
+                          {
+                            "attributes": {
+                              "argumentTypes": null,
+                              "isConstant": false,
+                              "isLValue": false,
+                              "isPure": true,
+                              "isStructConstructorCall": false,
+                              "lValueRequested": false,
+                              "names": [
+                                null
+                              ],
+                              "tryCall": false,
+                              "type": "address payable",
+                              "type_conversion": true
+                            },
+                            "children": [
+                              {
+                                "attributes": {
+                                  "argumentTypes": [
+                                    {
+                                      "typeIdentifier": "t_rational_0_by_1",
+                                      "typeString": "int_const 0"
+                                    }
+                                  ],
+                                  "isConstant": false,
+                                  "isLValue": false,
+                                  "isPure": true,
+                                  "lValueRequested": false,
+                                  "type": "type(address)"
+                                },
+                                "children": [
+                                  {
+                                    "attributes": {
+                                      "name": "address",
+                                      "type": null
+                                    },
+                                    "id": 13390,
+                                    "name": "ElementaryTypeName",
+                                    "src": "922:7:73"
+                                  }
+                                ],
+                                "id": 13391,
+                                "name": "ElementaryTypeNameExpression",
+                                "src": "922:7:73"
+                              },
+                              {
+                                "attributes": {
+                                  "argumentTypes": null,
+                                  "hexvalue": "30",
+                                  "isConstant": false,
+                                  "isLValue": false,
+                                  "isPure": true,
+                                  "lValueRequested": false,
+                                  "subdenomination": null,
+                                  "token": "number",
+                                  "type": "int_const 0",
+                                  "value": "0"
+                                },
+                                "id": 13392,
+                                "name": "Literal",
+                                "src": "930:1:73"
+                              }
+                            ],
+                            "id": 13393,
+                            "name": "FunctionCall",
+                            "src": "922:10:73"
+                          }
+                        ],
+                        "id": 13394,
+                        "name": "BinaryOperation",
+                        "src": "901:31:73"
+                      },
+                      {
+                        "children": [
+                          {
+                            "children": [
+                              {
+                                "attributes": {
+                                  "argumentTypes": null,
+                                  "isConstant": false,
+                                  "isLValue": false,
+                                  "isPure": false,
+                                  "isStructConstructorCall": false,
+                                  "lValueRequested": false,
+                                  "names": [
+                                    null
+                                  ],
+                                  "tryCall": false,
+                                  "type": "tuple()",
+                                  "type_conversion": false
+                                },
+                                "children": [
+                                  {
+                                    "attributes": {
+                                      "argumentTypes": [
+                                        {
+                                          "typeIdentifier": "t_bool",
+                                          "typeString": "bool"
+                                        },
+                                        {
+                                          "typeIdentifier": "t_stringliteral_1c20a4a5ade867a62d008df9d169dd3cc432ca281308ddda9d048c29457f08bf",
+                                          "typeString": "literal_string \"Just the register's owner can call the updateRegisterAddress()\""
+                                        }
+                                      ],
+                                      "overloadedDeclarations": [
+                                        -18,
+                                        -18
+                                      ],
+                                      "referencedDeclaration": -18,
+                                      "type": "function (bool,string memory) pure",
+                                      "value": "require"
+                                    },
+                                    "id": 13395,
+                                    "name": "Identifier",
+                                    "src": "948:7:73"
+                                  },
+                                  {
+                                    "attributes": {
+                                      "argumentTypes": null,
+                                      "isConstant": false,
+                                      "isLValue": false,
+                                      "isPure": false,
+                                      "isStructConstructorCall": false,
+                                      "lValueRequested": false,
+                                      "names": [
+                                        null
+                                      ],
+                                      "tryCall": false,
+                                      "type": "bool",
+                                      "type_conversion": false
+                                    },
+                                    "children": [
+                                      {
+                                        "attributes": {
+                                          "argumentTypes": [
+                                            {
+                                              "typeIdentifier": "t_address_payable",
+                                              "typeString": "address payable"
+                                            }
+                                          ],
+                                          "isConstant": false,
+                                          "isLValue": false,
+                                          "isPure": false,
+                                          "lValueRequested": false,
+                                          "member_name": "isOwner",
+                                          "referencedDeclaration": 1524,
+                                          "type": "function (address) view external returns (bool)"
+                                        },
+                                        "children": [
+                                          {
+                                            "attributes": {
+                                              "argumentTypes": null,
+                                              "overloadedDeclarations": [
+                                                null
+                                              ],
+                                              "referencedDeclaration": 13376,
+                                              "type": "contract JoveRegister",
+                                              "value": "register"
+                                            },
+                                            "id": 13396,
+                                            "name": "Identifier",
+                                            "src": "956:8:73"
+                                          }
+                                        ],
+                                        "id": 13397,
+                                        "name": "MemberAccess",
+                                        "src": "956:16:73"
+                                      },
+                                      {
+                                        "attributes": {
+                                          "argumentTypes": null,
+                                          "arguments": [
+                                            null
+                                          ],
+                                          "isConstant": false,
+                                          "isLValue": false,
+                                          "isPure": false,
+                                          "isStructConstructorCall": false,
+                                          "lValueRequested": false,
+                                          "names": [
+                                            null
+                                          ],
+                                          "tryCall": false,
+                                          "type": "address payable",
+                                          "type_conversion": false
+                                        },
+                                        "children": [
+                                          {
+                                            "attributes": {
+                                              "argumentTypes": [
+                                                null
+                                              ],
+                                              "overloadedDeclarations": [
+                                                null
+                                              ],
+                                              "referencedDeclaration": 10,
+                                              "type": "function () view returns (address payable)",
+                                              "value": "_msgSender"
+                                            },
+                                            "id": 13398,
+                                            "name": "Identifier",
+                                            "src": "973:10:73"
+                                          }
+                                        ],
+                                        "id": 13399,
+                                        "name": "FunctionCall",
+                                        "src": "973:12:73"
+                                      }
+                                    ],
+                                    "id": 13400,
+                                    "name": "FunctionCall",
+                                    "src": "956:30:73"
+                                  },
+                                  {
+                                    "attributes": {
+                                      "argumentTypes": null,
+                                      "hexvalue": "4a757374207468652072656769737465722773206f776e65722063616e2063616c6c20746865207570646174655265676973746572416464726573732829",
+                                      "isConstant": false,
+                                      "isLValue": false,
+                                      "isPure": true,
+                                      "lValueRequested": false,
+                                      "subdenomination": null,
+                                      "token": "string",
+                                      "type": "literal_string \"Just the register's owner can call the updateRegisterAddress()\"",
+                                      "value": "Just the register's owner can call the updateRegisterAddress()"
+                                    },
+                                    "id": 13401,
+                                    "name": "Literal",
+                                    "src": "988:64:73"
+                                  }
+                                ],
+                                "id": 13402,
+                                "name": "FunctionCall",
+                                "src": "948:105:73"
+                              }
+                            ],
+                            "id": 13403,
+                            "name": "ExpressionStatement",
+                            "src": "948:105:73"
+                          }
+                        ],
+                        "id": 13404,
+                        "name": "Block",
+                        "src": "934:131:73"
+                      }
+                    ],
+                    "id": 13405,
+                    "name": "IfStatement",
+                    "src": "897:168:73"
+                  },
+                  {
+                    "children": [
+                      {
+                        "attributes": {
+                          "argumentTypes": null,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": false,
+                          "lValueRequested": false,
+                          "operator": "=",
+                          "type": "contract JoveRegister"
+                        },
+                        "children": [
+                          {
+                            "attributes": {
+                              "argumentTypes": null,
+                              "overloadedDeclarations": [
+                                null
+                              ],
+                              "referencedDeclaration": 13376,
+                              "type": "contract JoveRegister",
+                              "value": "register"
+                            },
+                            "id": 13406,
+                            "name": "Identifier",
+                            "src": "1074:8:73"
+                          },
+                          {
+                            "attributes": {
+                              "argumentTypes": null,
+                              "isConstant": false,
+                              "isLValue": false,
+                              "isPure": false,
+                              "isStructConstructorCall": false,
+                              "lValueRequested": false,
+                              "names": [
+                                null
+                              ],
+                              "tryCall": false,
+                              "type": "contract JoveRegister",
+                              "type_conversion": true
+                            },
+                            "children": [
+                              {
+                                "attributes": {
+                                  "argumentTypes": [
+                                    {
+                                      "typeIdentifier": "t_address",
+                                      "typeString": "address"
+                                    }
+                                  ],
+                                  "overloadedDeclarations": [
+                                    null
+                                  ],
+                                  "referencedDeclaration": 18494,
+                                  "type": "type(contract JoveRegister)",
+                                  "value": "JoveRegister"
+                                },
+                                "id": 13407,
+                                "name": "Identifier",
+                                "src": "1085:12:73"
+                              },
+                              {
+                                "attributes": {
+                                  "argumentTypes": null,
+                                  "overloadedDeclarations": [
+                                    null
+                                  ],
+                                  "referencedDeclaration": 13383,
+                                  "type": "address",
+                                  "value": "registerAddr"
+                                },
+                                "id": 13408,
+                                "name": "Identifier",
+                                "src": "1098:12:73"
+                              }
+                            ],
+                            "id": 13409,
+                            "name": "FunctionCall",
+                            "src": "1085:26:73"
+                          }
+                        ],
+                        "id": 13410,
+                        "name": "Assignment",
+                        "src": "1074:37:73"
+                      }
+                    ],
+                    "id": 13411,
+                    "name": "ExpressionStatement",
+                    "src": "1074:37:73"
+                  },
+                  {
+                    "children": [
+                      {
+                        "attributes": {
+                          "argumentTypes": null,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": false,
+                          "isStructConstructorCall": false,
+                          "lValueRequested": false,
+                          "names": [
+                            null
+                          ],
+                          "tryCall": false,
+                          "type": "tuple()",
+                          "type_conversion": false
+                        },
+                        "children": [
+                          {
+                            "attributes": {
+                              "argumentTypes": [
+                                {
+                                  "typeIdentifier": "t_address",
+                                  "typeString": "address"
+                                }
+                              ],
+                              "overloadedDeclarations": [
+                                null
+                              ],
+                              "referencedDeclaration": 14187,
+                              "type": "function (address)",
+                              "value": "setOwnable"
+                            },
+                            "id": 13412,
+                            "name": "Identifier",
+                            "src": "1121:10:73"
+                          },
+                          {
+                            "attributes": {
+                              "argumentTypes": null,
+                              "overloadedDeclarations": [
+                                null
+                              ],
+                              "referencedDeclaration": 13383,
+                              "type": "address",
+                              "value": "registerAddr"
+                            },
+                            "id": 13413,
+                            "name": "Identifier",
+                            "src": "1132:12:73"
+                          }
+                        ],
+                        "id": 13414,
+                        "name": "FunctionCall",
+                        "src": "1121:24:73"
+                      }
+                    ],
+                    "id": 13415,
+                    "name": "ExpressionStatement",
+                    "src": "1121:24:73"
+                  },
+                  {
+                    "children": [
+                      {
+                        "attributes": {
+                          "argumentTypes": null,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": false,
+                          "lValueRequested": false,
+                          "operator": "=",
+                          "type": "address"
+                        },
+                        "children": [
+                          {
+                            "attributes": {
+                              "argumentTypes": null,
+                              "overloadedDeclarations": [
+                                null
+                              ],
+                              "referencedDeclaration": 13378,
+                              "type": "address",
+                              "value": "registerAddress"
+                            },
+                            "id": 13416,
+                            "name": "Identifier",
+                            "src": "1155:15:73"
+                          },
+                          {
+                            "attributes": {
+                              "argumentTypes": null,
+                              "overloadedDeclarations": [
+                                null
+                              ],
+                              "referencedDeclaration": 13383,
+                              "type": "address",
+                              "value": "registerAddr"
+                            },
+                            "id": 13417,
+                            "name": "Identifier",
+                            "src": "1171:12:73"
+                          }
+                        ],
+                        "id": 13418,
+                        "name": "Assignment",
+                        "src": "1155:28:73"
+                      }
+                    ],
+                    "id": 13419,
+                    "name": "ExpressionStatement",
+                    "src": "1155:28:73"
+                  }
+                ],
+                "id": 13420,
+                "name": "Block",
+                "src": "887:347:73"
+              }
+            ],
+            "id": 13421,
+            "name": "FunctionDefinition",
+            "src": "825:409:73"
+          }
+        ],
+        "id": 13422,
+        "name": "ContractDefinition",
+        "src": "635:602:73"
+      }
+    ],
+    "id": 13423,
+    "name": "SourceUnit",
+    "src": "543:695:73"
+  },
+  "compiler": {
+    "name": "solc",
+    "version": "0.6.12+commit.27d51765.Emscripten.clang"
+  },
+  "networks": {},
+  "schemaVersion": "3.3.3",
+  "updatedAt": "2021-06-19T07:35:34.958Z",
+  "devdoc": {
+    "kind": "dev",
+    "methods": {
+      "owner()": {
+        "details": "Returns the address of the current owner."
+      },
+      "renounceOwnership()": {
+        "details": "Leaves the contract without owner. It will not be possible to call `onlyOwner` functions anymore. Can only be called by the current owner. NOTE: Renouncing ownership will leave the contract without an owner, thereby removing any functionality that is only available to the owner."
+      },
+      "transferOwnership(address)": {
+        "details": "Transfers ownership of the contract to a new account (`newOwner`). Can only be called by the current owner."
+      }
+    },
+    "version": 1
+  },
+  "userdoc": {
+    "kind": "user",
+    "methods": {},
+    "version": 1
+  }
+}

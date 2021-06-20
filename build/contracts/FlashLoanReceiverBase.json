@@ -1,0 +1,559 @@
+{
+  "contractName": "FlashLoanReceiverBase",
+  "abi": [
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "_stakingPoolTokenAddress",
+          "type": "address"
+        }
+      ],
+      "stateMutability": "nonpayable",
+      "type": "constructor"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address[]",
+          "name": "assets",
+          "type": "address[]"
+        },
+        {
+          "internalType": "uint256[]",
+          "name": "amounts",
+          "type": "uint256[]"
+        },
+        {
+          "internalType": "uint256[]",
+          "name": "premiums",
+          "type": "uint256[]"
+        },
+        {
+          "internalType": "address",
+          "name": "initiator",
+          "type": "address"
+        },
+        {
+          "internalType": "bytes",
+          "name": "params",
+          "type": "bytes"
+        }
+      ],
+      "name": "executeOperation",
+      "outputs": [
+        {
+          "internalType": "bool",
+          "name": "",
+          "type": "bool"
+        }
+      ],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "stakingPoolTokenAddress",
+      "outputs": [
+        {
+          "internalType": "address",
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    }
+  ],
+  "metadata": "{\"compiler\":{\"version\":\"0.6.12+commit.27d51765\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"inputs\":[{\"internalType\":\"address\",\"name\":\"_stakingPoolTokenAddress\",\"type\":\"address\"}],\"stateMutability\":\"nonpayable\",\"type\":\"constructor\"},{\"inputs\":[{\"internalType\":\"address[]\",\"name\":\"assets\",\"type\":\"address[]\"},{\"internalType\":\"uint256[]\",\"name\":\"amounts\",\"type\":\"uint256[]\"},{\"internalType\":\"uint256[]\",\"name\":\"premiums\",\"type\":\"uint256[]\"},{\"internalType\":\"address\",\"name\":\"initiator\",\"type\":\"address\"},{\"internalType\":\"bytes\",\"name\":\"params\",\"type\":\"bytes\"}],\"name\":\"executeOperation\",\"outputs\":[{\"internalType\":\"bool\",\"name\":\"\",\"type\":\"bool\"}],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"stakingPoolTokenAddress\",\"outputs\":[{\"internalType\":\"address\",\"name\":\"\",\"type\":\"address\"}],\"stateMutability\":\"view\",\"type\":\"function\"}],\"devdoc\":{\"kind\":\"dev\",\"methods\":{},\"version\":1},\"userdoc\":{\"kind\":\"user\",\"methods\":{},\"version\":1}},\"settings\":{\"compilationTarget\":{\"/home/huanglinjia/MyDapp/test_truffle/JoveInsurance/contracts/flashloan/FlashLoanReceiverBase.sol\":\"FlashLoanReceiverBase\"},\"evmVersion\":\"istanbul\",\"libraries\":{},\"metadata\":{\"bytecodeHash\":\"ipfs\"},\"optimizer\":{\"enabled\":true,\"runs\":200},\"remappings\":[]},\"sources\":{\"/home/huanglinjia/MyDapp/test_truffle/JoveInsurance/contracts/flashloan/FlashLoanReceiverBase.sol\":{\"keccak256\":\"0xaaff9aba7cad523592ca73f394d41ebf4464dc1957da699942343f6c1513fd87\",\"urls\":[\"bzz-raw://7d3756ca701d22f7876000f6b5e55911b6c0de9b0771ce6fcdd0b6b7045857ad\",\"dweb:/ipfs/QmXv5kZLg5TztGyfxLeVhPmUsXpMntjybf8H4Ccsf8GEdh\"]},\"/home/huanglinjia/MyDapp/test_truffle/JoveInsurance/contracts/flashloan/IFlashLoanReceiver.sol\":{\"keccak256\":\"0x92fa49ae2cfc2cfbf8fba328d8fe9850c1fae887c0986604dc1363957bb6e256\",\"urls\":[\"bzz-raw://4a60445ef7b053a184300081e6e46160a4b8dcbd8cf1cd249af8e819fc5e9d18\",\"dweb:/ipfs/QmeHvhnCaAhAn75eCVBg5i5aX8envZrpXivLeUrMZWFY5U\"]}},\"version\":1}",
+  "bytecode": "0x",
+  "deployedBytecode": "0x",
+  "immutableReferences": {},
+  "sourceMap": "",
+  "deployedSourceMap": "",
+  "source": "\n//           DO WHAT THE FUCK YOU WANT TO PUBLIC LICENSE\n//                   Version 2, December 2004\n// \n//Copyright (C) 2021 ins3project <ins3project@yahoo.com>\n//\n//Everyone is permitted to copy and distribute verbatim or modified\n//copies of this license document, and changing it is allowed as long\n//as the name is changed.\n// \n//           DO WHAT THE FUCK YOU WANT TO PUBLIC LICENSE\n//  TERMS AND CONDITIONS FOR COPYING, DISTRIBUTION AND MODIFICATION\n//\n// You just DO WHAT THE FUCK YOU WANT TO.\npragma solidity >=0.6.0 <0.7.0;\nimport \"./IFlashLoanReceiver.sol\";\n\n\nabstract contract FlashLoanReceiverBase is IFlashLoanReceiver {\n  address public stakingPoolTokenAddress;\n\n  constructor(address _stakingPoolTokenAddress) public {\n    stakingPoolTokenAddress = _stakingPoolTokenAddress;\n  }\n}",
+  "sourcePath": "/home/huanglinjia/MyDapp/test_truffle/JoveInsurance/contracts/flashloan/FlashLoanReceiverBase.sol",
+  "ast": {
+    "absolutePath": "/home/huanglinjia/MyDapp/test_truffle/JoveInsurance/contracts/flashloan/FlashLoanReceiverBase.sol",
+    "exportedSymbols": {
+      "FlashLoanReceiverBase": [
+        17024
+      ]
+    },
+    "id": 17025,
+    "license": null,
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 17008,
+        "literals": [
+          "solidity",
+          ">=",
+          "0.6",
+          ".0",
+          "<",
+          "0.7",
+          ".0"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "506:31:79"
+      },
+      {
+        "absolutePath": "/home/huanglinjia/MyDapp/test_truffle/JoveInsurance/contracts/flashloan/IFlashLoanReceiver.sol",
+        "file": "./IFlashLoanReceiver.sol",
+        "id": 17009,
+        "nodeType": "ImportDirective",
+        "scope": 17025,
+        "sourceUnit": 17047,
+        "src": "538:34:79",
+        "symbolAliases": [],
+        "unitAlias": ""
+      },
+      {
+        "abstract": true,
+        "baseContracts": [
+          {
+            "arguments": null,
+            "baseName": {
+              "contractScope": null,
+              "id": 17010,
+              "name": "IFlashLoanReceiver",
+              "nodeType": "UserDefinedTypeName",
+              "referencedDeclaration": 17046,
+              "src": "618:18:79",
+              "typeDescriptions": {
+                "typeIdentifier": "t_contract$_IFlashLoanReceiver_$17046",
+                "typeString": "contract IFlashLoanReceiver"
+              }
+            },
+            "id": 17011,
+            "nodeType": "InheritanceSpecifier",
+            "src": "618:18:79"
+          }
+        ],
+        "contractDependencies": [
+          17046
+        ],
+        "contractKind": "contract",
+        "documentation": null,
+        "fullyImplemented": false,
+        "id": 17024,
+        "linearizedBaseContracts": [
+          17024,
+          17046
+        ],
+        "name": "FlashLoanReceiverBase",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "constant": false,
+            "functionSelector": "316b9a78",
+            "id": 17013,
+            "mutability": "mutable",
+            "name": "stakingPoolTokenAddress",
+            "nodeType": "VariableDeclaration",
+            "overrides": null,
+            "scope": 17024,
+            "src": "641:38:79",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_address",
+              "typeString": "address"
+            },
+            "typeName": {
+              "id": 17012,
+              "name": "address",
+              "nodeType": "ElementaryTypeName",
+              "src": "641:7:79",
+              "stateMutability": "nonpayable",
+              "typeDescriptions": {
+                "typeIdentifier": "t_address",
+                "typeString": "address"
+              }
+            },
+            "value": null,
+            "visibility": "public"
+          },
+          {
+            "body": {
+              "id": 17022,
+              "nodeType": "Block",
+              "src": "737:61:79",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "id": 17020,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftHandSide": {
+                      "argumentTypes": null,
+                      "id": 17018,
+                      "name": "stakingPoolTokenAddress",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 17013,
+                      "src": "743:23:79",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_address",
+                        "typeString": "address"
+                      }
+                    },
+                    "nodeType": "Assignment",
+                    "operator": "=",
+                    "rightHandSide": {
+                      "argumentTypes": null,
+                      "id": 17019,
+                      "name": "_stakingPoolTokenAddress",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 17015,
+                      "src": "769:24:79",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_address",
+                        "typeString": "address"
+                      }
+                    },
+                    "src": "743:50:79",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "id": 17021,
+                  "nodeType": "ExpressionStatement",
+                  "src": "743:50:79"
+                }
+              ]
+            },
+            "documentation": null,
+            "id": 17023,
+            "implemented": true,
+            "kind": "constructor",
+            "modifiers": [],
+            "name": "",
+            "nodeType": "FunctionDefinition",
+            "overrides": null,
+            "parameters": {
+              "id": 17016,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 17015,
+                  "mutability": "mutable",
+                  "name": "_stakingPoolTokenAddress",
+                  "nodeType": "VariableDeclaration",
+                  "overrides": null,
+                  "scope": 17023,
+                  "src": "696:32:79",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 17014,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "696:7:79",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "695:34:79"
+            },
+            "returnParameters": {
+              "id": 17017,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "737:0:79"
+            },
+            "scope": 17024,
+            "src": "684:114:79",
+            "stateMutability": "nonpayable",
+            "virtual": false,
+            "visibility": "public"
+          }
+        ],
+        "scope": 17025,
+        "src": "575:225:79"
+      }
+    ],
+    "src": "506:294:79"
+  },
+  "legacyAST": {
+    "attributes": {
+      "absolutePath": "/home/huanglinjia/MyDapp/test_truffle/JoveInsurance/contracts/flashloan/FlashLoanReceiverBase.sol",
+      "exportedSymbols": {
+        "FlashLoanReceiverBase": [
+          17024
+        ]
+      },
+      "license": null
+    },
+    "children": [
+      {
+        "attributes": {
+          "literals": [
+            "solidity",
+            ">=",
+            "0.6",
+            ".0",
+            "<",
+            "0.7",
+            ".0"
+          ]
+        },
+        "id": 17008,
+        "name": "PragmaDirective",
+        "src": "506:31:79"
+      },
+      {
+        "attributes": {
+          "SourceUnit": 17047,
+          "absolutePath": "/home/huanglinjia/MyDapp/test_truffle/JoveInsurance/contracts/flashloan/IFlashLoanReceiver.sol",
+          "file": "./IFlashLoanReceiver.sol",
+          "scope": 17025,
+          "symbolAliases": [
+            null
+          ],
+          "unitAlias": ""
+        },
+        "id": 17009,
+        "name": "ImportDirective",
+        "src": "538:34:79"
+      },
+      {
+        "attributes": {
+          "abstract": true,
+          "contractDependencies": [
+            17046
+          ],
+          "contractKind": "contract",
+          "documentation": null,
+          "fullyImplemented": false,
+          "linearizedBaseContracts": [
+            17024,
+            17046
+          ],
+          "name": "FlashLoanReceiverBase",
+          "scope": 17025
+        },
+        "children": [
+          {
+            "attributes": {
+              "arguments": null
+            },
+            "children": [
+              {
+                "attributes": {
+                  "contractScope": null,
+                  "name": "IFlashLoanReceiver",
+                  "referencedDeclaration": 17046,
+                  "type": "contract IFlashLoanReceiver"
+                },
+                "id": 17010,
+                "name": "UserDefinedTypeName",
+                "src": "618:18:79"
+              }
+            ],
+            "id": 17011,
+            "name": "InheritanceSpecifier",
+            "src": "618:18:79"
+          },
+          {
+            "attributes": {
+              "constant": false,
+              "functionSelector": "316b9a78",
+              "mutability": "mutable",
+              "name": "stakingPoolTokenAddress",
+              "overrides": null,
+              "scope": 17024,
+              "stateVariable": true,
+              "storageLocation": "default",
+              "type": "address",
+              "value": null,
+              "visibility": "public"
+            },
+            "children": [
+              {
+                "attributes": {
+                  "name": "address",
+                  "stateMutability": "nonpayable",
+                  "type": "address"
+                },
+                "id": 17012,
+                "name": "ElementaryTypeName",
+                "src": "641:7:79"
+              }
+            ],
+            "id": 17013,
+            "name": "VariableDeclaration",
+            "src": "641:38:79"
+          },
+          {
+            "attributes": {
+              "documentation": null,
+              "implemented": true,
+              "isConstructor": true,
+              "kind": "constructor",
+              "modifiers": [
+                null
+              ],
+              "name": "",
+              "overrides": null,
+              "scope": 17024,
+              "stateMutability": "nonpayable",
+              "virtual": false,
+              "visibility": "public"
+            },
+            "children": [
+              {
+                "children": [
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "mutability": "mutable",
+                      "name": "_stakingPoolTokenAddress",
+                      "overrides": null,
+                      "scope": 17023,
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "type": "address",
+                      "value": null,
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "name": "address",
+                          "stateMutability": "nonpayable",
+                          "type": "address"
+                        },
+                        "id": 17014,
+                        "name": "ElementaryTypeName",
+                        "src": "696:7:79"
+                      }
+                    ],
+                    "id": 17015,
+                    "name": "VariableDeclaration",
+                    "src": "696:32:79"
+                  }
+                ],
+                "id": 17016,
+                "name": "ParameterList",
+                "src": "695:34:79"
+              },
+              {
+                "attributes": {
+                  "parameters": [
+                    null
+                  ]
+                },
+                "children": [],
+                "id": 17017,
+                "name": "ParameterList",
+                "src": "737:0:79"
+              },
+              {
+                "children": [
+                  {
+                    "children": [
+                      {
+                        "attributes": {
+                          "argumentTypes": null,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": false,
+                          "lValueRequested": false,
+                          "operator": "=",
+                          "type": "address"
+                        },
+                        "children": [
+                          {
+                            "attributes": {
+                              "argumentTypes": null,
+                              "overloadedDeclarations": [
+                                null
+                              ],
+                              "referencedDeclaration": 17013,
+                              "type": "address",
+                              "value": "stakingPoolTokenAddress"
+                            },
+                            "id": 17018,
+                            "name": "Identifier",
+                            "src": "743:23:79"
+                          },
+                          {
+                            "attributes": {
+                              "argumentTypes": null,
+                              "overloadedDeclarations": [
+                                null
+                              ],
+                              "referencedDeclaration": 17015,
+                              "type": "address",
+                              "value": "_stakingPoolTokenAddress"
+                            },
+                            "id": 17019,
+                            "name": "Identifier",
+                            "src": "769:24:79"
+                          }
+                        ],
+                        "id": 17020,
+                        "name": "Assignment",
+                        "src": "743:50:79"
+                      }
+                    ],
+                    "id": 17021,
+                    "name": "ExpressionStatement",
+                    "src": "743:50:79"
+                  }
+                ],
+                "id": 17022,
+                "name": "Block",
+                "src": "737:61:79"
+              }
+            ],
+            "id": 17023,
+            "name": "FunctionDefinition",
+            "src": "684:114:79"
+          }
+        ],
+        "id": 17024,
+        "name": "ContractDefinition",
+        "src": "575:225:79"
+      }
+    ],
+    "id": 17025,
+    "name": "SourceUnit",
+    "src": "506:294:79"
+  },
+  "compiler": {
+    "name": "solc",
+    "version": "0.6.12+commit.27d51765.Emscripten.clang"
+  },
+  "networks": {},
+  "schemaVersion": "3.3.3",
+  "updatedAt": "2021-06-19T07:35:35.036Z",
+  "devdoc": {
+    "kind": "dev",
+    "methods": {},
+    "version": 1
+  },
+  "userdoc": {
+    "kind": "user",
+    "methods": {},
+    "version": 1
+  }
+}
